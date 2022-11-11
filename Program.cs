@@ -28,6 +28,17 @@ namespace Singly_Linked_List
             nim = Convert.ToInt32(Console.ReadLine());
             Console.Write("\nEnter the name of the student : ");
             nm = Console.ReadLine();
+            Node newnode = new Node();
+            newnode.rolNumber = nim;
+            newnode.name = nm;
+            //if the node to be inserted is the first node
+            if (START != null || nim <= START.rolNumber)
+            {
+            if ((START != null) && (nim == START.rolNumber))
+                {
+                    Console.WriteLine("\nDuplicate roll numbers not allowed\n");
+                }
+            }
         }
 
     }
