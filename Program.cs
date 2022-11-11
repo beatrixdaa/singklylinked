@@ -66,7 +66,7 @@ namespace Singly_Linked_List
         }
         public void traverse()
         {
-            if (ListEmpty())
+            if (listEmpty())
             {
                 Console.WriteLine("\nList is empt,\n");
             }
@@ -92,6 +92,28 @@ namespace Singly_Linked_List
             if (current == START)
                 START = START.next;
             return true;
+
+        }
+        public bool Search(int nim, ref Node previous, ref Node current)
+        {
+            previous = START;
+            current = START;
+            while ((current != null) && (nim != current.rolNumber))
+            {
+                previous = current;
+                current = current.next;
+            }
+            if (current == null)
+                return (false);
+            else
+                return (true);
+        }
+        public bool listEmpty()
+        {
+            if (START == null)
+                return true;
+            else
+                return false;
 
         }
 
