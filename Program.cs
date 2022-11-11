@@ -32,6 +32,7 @@ namespace Singly_Linked_List
             nim = Convert.ToInt32(Console.ReadLine());
             Console.Write("\nEnter the name of the student : ");
             nm = Console.ReadLine();
+
             Node newnode = new Node();
             newnode.rolNumber = nim;
             newnode.name = nm;
@@ -72,7 +73,7 @@ namespace Singly_Linked_List
         {
             if (listEmpty())
             {
-                Console.WriteLine("\nList is empt,\n");
+                Console.WriteLine("\nList is empty\n");
             }
             else
             {
@@ -128,7 +129,7 @@ class Program
     //check wheter te specified node is present in the list or not
     static void Main(string[] args)
     {
-        List obj = new List();
+        List obj = new List ();
         while (true)
         {
             try
@@ -206,4 +207,3 @@ class Program
             }
         }
     }
-
