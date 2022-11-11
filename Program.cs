@@ -86,7 +86,7 @@ namespace Singly_Linked_List
             Node previous, current;
             previous = current = null;
             //check if the spesified node is present in the list or not
-            if (Search(nim, ref previous, ref current) == false
+            if (Search(nim, ref previous, ref current) == false)
                 return false;
             previous.next = current.next;
             if (current == START)
