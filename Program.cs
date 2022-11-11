@@ -67,7 +67,9 @@ namespace Singly_Linked_List
         public void traverse()
         {
             if (ListEmpty())
+            {
                 Console.WriteLine("\nList is empt,\n");
+            }
             else
             {
                 Console.WriteLine("\nThe records in the List are : ");
@@ -75,8 +77,22 @@ namespace Singly_Linked_List
                 for (currentNode = START; currentNode != null;
                     currentNode = currentNode.next)
                     Console.Write(currentNode.rolNumber + "" + currentNode.name + "\n");
+
                 Console.WriteLine();
             }
+        }
+        public bool delNode(int nim)
+        {
+            Node previous, current;
+            previous = current = null;
+            //check if the spesified node is present in the list or not
+            if (Search(nim, ref previous, ref current) == false)
+                return false;
+            previous.next = current.next;
+            if (current == START)
+                START = START.next;
+            return true;
+
         }
 
     }
